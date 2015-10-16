@@ -19,3 +19,42 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
 }
+.makes {
+  display: inline-block;
+  margin-right: 1%;
+  padding-left: 1%;
+}
+.serving-input {
+  display: inline-block;
+}
+.servings {
+  display: inline-block;
+  margin-left: 1%;
+}
+.adjust-serving {
+  margin-left: 2%;
+}
+.qty {
+  display: inline-block;
+  padding-right: 0.5%;
+  font-family: 'Arial';
+}
+.name {
+  display: inline-block;
+  padding-left: 0.5%;
+  font-family: 'Arial';
+}
+.unit {
+  display: inline-block;
+  font-family: 'Arial';
+}
+.recipe-ul {
+  list-style-type: none;
+}
+.radio {
+  margin-right: 1%;
+}
+.input-form {
+  border: 1px dotted black;
+  width: 500px;
+}

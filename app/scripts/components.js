@@ -42,20 +42,21 @@ handleChange(e){
 render(){
   return (
       <div>
-          <form onSubmit={this.updateServings}>
-            <h3>Makes</h3>
-            <input type="number" value={this.state.servings} onChange={this.handleChange}/>
-            <h4>servings</h4>
-            <button type="submit">Adjust Recipe</button>
+          <form className="input-form" onSubmit={this.updateServings}>
+            <h3 className="makes"><i>Making</i></h3>
+            <input className="serving-input" type="number" value={this.state.servings} onChange={this.handleChange}/>
+            <h4 className="servings"><i>servings</i></h4>
+            <button className="adjust-serving" type="submit">Adjust Recipe</button>
           </form>
     <h1>{this.props.recipe.Name}</h1>
-    <ul>
+    <ul className="recipe-ul">
       {this.props.recipe.ingredients.map((a) => {
         return (
           <li key={_.uniqueId('recipe')}>
-          <h3>{this.state.updatedservings * a.qty}</h3>
-          <h5>{a.unit}</h5>
-          <h1>{a.name}</h1>
+          <input className="radio" type="radio"></input>
+          <p className="qty">{this.state.updatedservings * a.qty}</p>
+          <p className="unit">{a.unit}</p>
+          <p className="name">{a.name}</p>
           </li>
         )
       })
