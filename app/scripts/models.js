@@ -14,6 +14,7 @@ defaults: function(){
   return {
     name: "",
     ingredients: [],
+
   }
 },
 toJSON(){
