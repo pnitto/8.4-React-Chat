@@ -12,9 +12,9 @@ var Recipe = Backbone.Model.extend({
 
 defaults: function(){
   return {
-    name: "",
+    Name: "",
     ingredients: [],
-
+    Servings: 0
   }
 },
 toJSON(){
