@@ -18,25 +18,27 @@ var AppRouter = Backbone.Router.extend({
 
     this.listenTo(this,'route', () => clearInterval(this.interval))
 },
-create(){
-return <h1>Hello</h1>
-},
+  create(){
+    return <h1>Hello</h1>
+  },
 
-index(){
+  index(){
     this.recipes.fetch();
-},
+  },
 
-saveRecipe(){
-/*  this.recipes.create(this.newRecipe.toJSON());
-      this.newRecipe.clear().set(this.newRecipe.defaults);
+  saveRecipe(){
+    this.recipes.create(this.newRecipe.toJSON());
+    this.newRecipe.clear().set(this.newRecipe.defaults);
+    this.renderApp();
     },
-    */
+/*
   this.newRecipe.save().then(() => {
       this.recipes.add(this.newRecipe);
       this.newRecipe = new Recipe();
-      this.renderApp
+      this.renderApp()
     });
 },
+*/
  renderApp(){
   ReactDOM.render(
     <App
@@ -45,7 +47,7 @@ saveRecipe(){
         OnSaveRecipe = {this.saveRecipe.bind(this)}
         />,
       document.getElementById('container'));
-}
+    }
 })
 
 window.router = new AppRouter();

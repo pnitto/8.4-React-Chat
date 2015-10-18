@@ -18,7 +18,6 @@ var App = React.createClass({
     this.setState({
       recipes: this.state.recipes.concat([recipe])
     })
-
   },
   render(){
   return (
@@ -30,7 +29,7 @@ var App = React.createClass({
           this.props.recipes.map((r) => <Recipe recipe={r} key={r.id}/>)
         }
       </ul>
-      <RecipeForm initialRecipe={this.state.newRecipe} OnSaveRecipe={this.addNewRecipe}></RecipeForm>
+      <RecipeForm initialRecipe={this.props.newRecipe} OnSaveRecipe={this.addNewRecipe}></RecipeForm>
     </div>
   );
   }
@@ -123,10 +122,5 @@ render(){
 }
 
 })
-
-
-
-
-
 
 export default {App};
